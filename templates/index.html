@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MCQ Generator</title>
+<style>
+body{font-family:Arial;background:#f5f7fb;padding:20px}
+.container{max-width:600px;margin:auto;background:white;padding:25px;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,0.1)}
+input,select,button{width:100%;padding:12px;margin:8px 0;border-radius:8px;border:1px solid #ddd;box-sizing:border-box}
+button{background:#4f46e5;color:white;border:none;font-size:16px;cursor:pointer}
+h1{text-align:center}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>🧠 MCQ Generator</h1>
+<p style="text-align:center;color:#666">AI Powered Flask App</p>
+<form action="/generate" method="POST">
+<label>Topic</label>
+<input type="text" name="topic" placeholder="e.g. Python, SQL, Data Analyst" required>
+<label>Number of Questions</label>
+<select name="num_questions"><option value="5">5</option><option value="10">10</option></select>
+<label>Difficulty</label>
+<select name="difficulty"><option>Easy</option><option selected>Medium</option><option>Hard</option></select>
+<button type="submit">Generate MCQs 🚀</button>
+</form>
+</div>
+</body>
+</html>
