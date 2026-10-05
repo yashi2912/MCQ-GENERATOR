@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head><title>Result</title>
+<style>
+body{font-family:Arial;background:#f5f7fb;padding:20px}
+.container{max-width:700px;margin:auto}
+.card{background:white;padding:15px;margin:10px 0;border-radius:8px;box-shadow:0 2px 5px rgba(0,0,0,0.1)}
+.correct{background:#dcfce7;font-weight:bold}
+a{color:#4f46e5;text-decoration:none}
+li{padding:6px;list-style:none;border:1px solid #eee;margin:5px 0;border-radius:5px}
+ul{padding:0}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>{{ topic }} - {{ difficulty }}</h1>
+<a href="/">← Back</a>
+{% for mcq in mcqs %}
+<div class="card">
+<h3>Q{{ loop.index }}. {{ mcq.q }}</h3>
+<ul>
+{% for opt in mcq.options %}
+<li class="{{ 'correct' if opt==mcq.answer else '' }}">{{ opt }} {% if opt==mcq.answer %}✅{% endif %}</li>
+{% endfor %}
+</ul>
+</div>
+{% endfor %}
+<button onclick="window.print()" style="width:100%;padding:12px;background:#4f46e5;color:white;border:none;border-radius:8px">Print / Save PDF</button>
+</div>
+</body>
+</html>
