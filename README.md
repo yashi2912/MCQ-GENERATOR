@@ -8,7 +8,8 @@ A Flask-based MCQ Generator that creates multiple-choice questions dynamically.
 - Auto correct answer + Print PDF
 
 ## 🛠️ Run
-pip install -r requirements.txt
-python app.py
-
-Built by Yashi Shukla | Invertis University, Bareilly
+```bash
+ pip install -r requirements.txt
+ python app.py
+ ```
+ Built by Yashi Shukla...
